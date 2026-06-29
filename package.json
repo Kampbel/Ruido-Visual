@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --minify",
     "build:css": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --minify",
     "watch:css": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch",
     "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch"
