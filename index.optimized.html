@@ -1,0 +1,857 @@
+<!doctype html>
+<html class="dark" lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ruido Visual — Productora Audiovisual</title>
+
+  <!-- Preconnect + Consolidated fonts (single request) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Plus+Jakarta+Sans:wght@300;400;600&family=Space+Grotesk:wght@500;600;700&family=Material+Symbols+Outlined&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS (compiled for production) -->
+  <link rel="stylesheet" href="./dist/output.css">
+</head>
+
+<body
+  class="bg-surface text-on-surface font-body overflow-x-hidden selection:bg-primary-container selection:text-white">
+
+  <!-- Header -->
+  <header
+    class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl border-b border-[#FFD700]/10 h-20">
+    <div class="flex justify-between items-center w-full px-6 max-w-7xl mx-auto h-full">
+      <div class="font-display text-2xl text-primary italic">Ruido Visual</div>
+      <nav class="hidden md:flex items-center gap-8">
+        <a href="#inicio"
+          class="text-sm uppercase tracking-widest text-white border-b-2 border-[#FFD700] pb-1 font-semibold">Inicio</a>
+        <a href="#nosotros" class="text-sm text-[#d4c0d7] hover:text-white transition-colors">Nosotros</a>
+        <a href="#equipo" class="text-sm text-[#d4c0d7] hover:text-white transition-colors">Equipo</a>
+        <a href="#proyectos" class="text-sm text-[#d4c0d7] hover:text-white transition-colors">Proyectos</a>
+        <a href="#recorrido" class="text-sm text-[#d4c0d7] hover:text-white transition-colors">Recorrido</a>
+        <a href="#galeria" class="text-sm text-[#d4c0d7] hover:text-white transition-colors">Galería</a>
+      </nav>
+      <a href="#documental" class="px-5 py-2 bg-primary-container text-white rounded-full hidden md:inline-flex items-center justify-center glow-hover font-semibold text-sm">Ver
+        Documental</a>
+      <button class="md:hidden p-3" id="mobile-menu-btn"><span class="material-symbols-outlined">menu</span></button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section id="inicio" class="relative min-h-screen flex items-center pt-20 hero-grain">
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-black/40 z-10"></div>
+        <div class="absolute inset-0 cinematic-gradient z-20"></div>
+        <img alt="Renacer en tacones" class="w-full h-full object-cover" src="./portada.png" loading="eager"
+          decoding="async" fetchpriority="high">
+      </div>
+
+      <div class="relative z-30 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 items-center">
+        <div class="flex flex-col items-start gap-6">
+          <span class="text-xs uppercase tracking-[0.2em] text-[#FFD700] font-bold hero-anim-1">Una Odisea Visual</span>
+          <h1 class="font-display text-6xl md:text-[112px] leading-tight italic neon-text neon-pulse hero-anim-2">Renacer<br><span
+              class="text-white font-black ml-8" style="text-shadow: 0 2px 4px rgba(0,0,0,0.5)">en tacones</span></h1>
+          <p class="text-lg text-white max-w-lg hero-anim-3" style="text-shadow: 0 1px 3px rgba(0,0,0,0.4)">Un viaje cinematográfico hacia el corazón de la
+            transformación. Descubre el arte, la lucha y el brillo eterno que reside bajo las luces de neón.</p>
+          <div class="flex gap-4 mt-6 hero-anim-4">
+            <a href="#documental"
+              class="flex items-center gap-2 px-6 py-3 rounded-full font-semibold magnetic-btn" style="background: linear-gradient(135deg, #bd00ff 0%, #ff4b89 100%); color: #ffffff"><span
+                class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_arrow</span>Ver
+              documental</a>
+            <a href="#nosotros" class="px-6 py-3 border-2 border-[#FFD700] text-[#FFD700] rounded-full font-semibold hover:bg-[#FFD700]/10 magnetic-btn">Descubre más</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2 opacity-80 scroll-bounce">
+        <span class="text-[10px] tracking-widest uppercase text-white">Scroll</span>
+        <div class="w-px h-12 bg-gradient-to-b from-primary to-transparent"></div>
+        <span class="material-symbols-outlined text-primary text-sm">expand_more</span>
+      </div>
+    </section>
+
+    <!-- Nosotros: Objetivo & Visión -->
+    <section id="nosotros" class="py-16 md:py-32 overflow-hidden bg-atmo-resena">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <span class="text-sm uppercase tracking-widest text-secondary reveal">Quiénes Somos</span>
+          <h2 class="font-display text-4xl md:text-5xl text-primary mt-2 reveal">Ruido Visual</h2>
+          <p class="text-white/70 mt-4 max-w-2xl mx-auto reveal">Creamos narrativas visuales que trascienden la pantalla. Somos una productora audiovisual comprometida con historias que importan.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 md:gap-16">
+          <!-- Objetivo -->
+          <div class="reveal-left">
+            <div class="glass-panel rounded-2xl p-8 md:p-10 h-full card-glow">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-14 h-14 rounded-xl flex items-center justify-center" style="background: linear-gradient(135deg, #bd00ff 0%, #ff4b89 100%)">
+                  <span class="material-symbols-outlined text-white text-2xl" style="font-variation-settings:'FILL' 1">flag</span>
+                </div>
+                <h3 class="font-display text-2xl text-[#FFD700] italic">Nuestro Objetivo</h3>
+              </div>
+              <h4 class="text-xl text-white font-semibold mb-4">El Arte como Puente Social</h4>
+              <p class="text-white/80 leading-relaxed">Renacer en Tacones busca humanizar la escena LGBTQ+ más allá del espectáculo. Nuestra misión es capturar el alma de Diego, explorando la vulnerabilidad y la fuerza que habita bajo el maquillaje. A través de un relato cinematográfico incluyente, el documental funciona como una herramienta cultural para sensibilizar al público general y dignificar las historias que nacen desde la resiliencia y el deseo de transformación.</p>
+            </div>
+          </div>
+
+          <!-- Visión -->
+          <div class="reveal-right">
+            <div class="glass-panel rounded-2xl p-8 md:p-10 h-full card-glow">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-14 h-14 rounded-xl flex items-center justify-center" style="background: linear-gradient(135deg, #e9c400 0%, #FFD700 100%)">
+                  <span class="material-symbols-outlined text-[#3a3000] text-2xl" style="font-variation-settings:'FILL' 1">visibility</span>
+                </div>
+                <h3 class="font-display text-2xl text-[#FFD700] italic">Nuestra Visión</h3>
+              </div>
+              <h4 class="text-xl text-white font-semibold mb-4">Narrativas que Transforman</h4>
+              <p class="text-white/80 leading-relaxed">Aspiramos a convertirnos en un referente de producción audiovisual independiente en Latinoamérica, donde cada proyecto sea un acto de justicia narrativa. Visualizamos un futuro en el que las historias diversas ocupen el centro de la pantalla, derribando estigmas y construyendo empatía a través del poder del cine documental. Nuestro compromiso es amplificar las voces que el mainstream silencia, creando contenido que inspire, eduque y conecte comunidades.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Decorative quote -->
+        <div class="mt-16 text-center reveal">
+          <blockquote class="font-display text-2xl md:text-3xl italic text-primary/60 max-w-3xl mx-auto">
+            "El cine es el espejo donde la sociedad se atreve a verse sin filtros."
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equipo Ruido Audiovisual (Carousel) -->
+    <section id="equipo" class="py-16 md:py-32 bg-atmo-colaboradores">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+          <div>
+            <span class="text-sm text-tertiary uppercase tracking-widest reveal">El Equipo</span>
+            <h2 class="text-3xl md:text-4xl text-white reveal">Las mentes detrás del ruido</h2>
+          </div>
+          <div class="flex items-center gap-4">
+            <p class="max-w-sm text-white/80 reveal hidden md:block">Profesionales apasionados que transforman ideas en experiencias audiovisuales inolvidables.</p>
+            <!-- Carousel Arrows -->
+            <div class="flex gap-2 reveal">
+              <button id="carousel-prev" aria-label="Anterior"
+                class="w-11 h-11 rounded-full glass-panel flex items-center justify-center text-primary hover:text-white hover:bg-primary-container transition-all magnetic-btn">
+                <span class="material-symbols-outlined text-lg">chevron_left</span>
+              </button>
+              <button id="carousel-next" aria-label="Siguiente"
+                class="w-11 h-11 rounded-full glass-panel flex items-center justify-center text-primary hover:text-white hover:bg-primary-container transition-all magnetic-btn">
+                <span class="material-symbols-outlined text-lg">chevron_right</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel Track -->
+        <div class="relative overflow-hidden reveal" id="team-carousel">
+          <div class="flex transition-transform duration-500 ease-out gap-6" id="carousel-track" style="cursor: grab;">
+
+            <!-- Kristel Zapata -->
+            <div class="carousel-card flex-shrink-0 w-[280px] sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] group card-glow">
+              <div class="aspect-[3/4] overflow-hidden rounded-xl mb-4 relative">
+                <img alt="Kristel Zapata"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  src="./img/Kristel_zapata.webp" loading="lazy" decoding="async">
+                <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <p class="text-white text-xs">"Cada cuadro cuenta una historia"</p>
+                </div>
+              </div>
+              <h3 class="text-xl text-primary">Kristel Zapata</h3>
+              <p class="uppercase text-xs text-on-surface-variant tracking-wider">Director & Visionario</p>
+            </div>
+
+            <!-- Josué Valenzuela -->
+            <div class="carousel-card flex-shrink-0 w-[280px] sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] group card-glow">
+              <div class="aspect-[3/4] overflow-hidden rounded-xl mb-4 relative">
+                <img alt="Josué Valenzuela"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  src="./img/Josue.webp" loading="lazy" decoding="async">
+                <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <p class="text-white text-xs">"La producción es el alma invisible"</p>
+                </div>
+              </div>
+              <h3 class="text-xl text-primary">Josué Valenzuela</h3>
+              <p class="uppercase text-xs text-on-surface-variant tracking-wider">Producción General</p>
+            </div>
+
+            <!-- Andrea Belleza -->
+            <div class="carousel-card flex-shrink-0 w-[280px] sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] group card-glow">
+              <div class="aspect-[3/4] overflow-hidden rounded-xl mb-4 relative">
+                <img alt="Andrea Belleza"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  src="./img/Andrea_beleza.webp" loading="lazy" decoding="async">
+                <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <p class="text-white text-xs">"El arte visual define el tono"</p>
+                </div>
+              </div>
+              <h3 class="text-xl text-primary">Andrea Belleza</h3>
+              <p class="uppercase text-xs text-on-surface-variant tracking-wider">Dirección de Arte</p>
+            </div>
+
+            <!-- Alejandra Aparicio -->
+            <div class="carousel-card flex-shrink-0 w-[280px] sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] group card-glow">
+              <div class="aspect-[3/4] overflow-hidden rounded-xl mb-4 relative">
+                <img alt="Alejandra Aparicio"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  src="./img/Alejandra_Aparicio.webp" loading="lazy" decoding="async">
+                <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <p class="text-white text-xs">"Cada detalle cuenta"</p>
+                </div>
+              </div>
+              <h3 class="text-xl text-primary">Alejandra Aparicio</h3>
+              <p class="uppercase text-xs text-on-surface-variant tracking-wider">Asistente de Producción</p>
+            </div>
+
+            <!-- Pedro Roalcaba -->
+            <div class="carousel-card flex-shrink-0 w-[280px] sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] group card-glow">
+              <div class="aspect-[3/4] overflow-hidden rounded-xl mb-4 relative">
+                <img alt="Pedro Roalcaba"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  src="./img/Pedro_Roalcaba.webp" loading="lazy" decoding="async">
+                <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <p class="text-white text-xs">"Siempre en movimiento"</p>
+                </div>
+              </div>
+              <h3 class="text-xl text-primary">Pedro Roalcaba</h3>
+              <p class="uppercase text-xs text-on-surface-variant tracking-wider">Asistente de Producción</p>
+            </div>
+
+            <!-- Brayan Carrión -->
+            <div class="carousel-card flex-shrink-0 w-[280px] sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] group card-glow">
+              <div class="aspect-[3/4] overflow-hidden rounded-xl mb-4 relative">
+                <img alt="Brayan Carrión"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  src="./img/Brayan_carrion.webp" loading="lazy" decoding="async">
+                <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <p class="text-white text-xs">"La luz lo es todo"</p>
+                </div>
+              </div>
+              <h3 class="text-xl text-primary">Brayan Carrión</h3>
+              <p class="uppercase text-xs text-on-surface-variant tracking-wider">Iluminación</p>
+            </div>
+
+            <!-- Freddy Gonzáles -->
+            <div class="carousel-card flex-shrink-0 w-[280px] sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] group card-glow">
+              <div class="aspect-[3/4] overflow-hidden rounded-xl mb-4 relative">
+                <img alt="Freddy Gonzáles"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  src="./img/Fredy_gonzales.webp" loading="lazy" decoding="async">
+                <div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <p class="text-white text-xs">"El lente nunca miente"</p>
+                </div>
+              </div>
+              <h3 class="text-xl text-primary">Freddy Gonzáles</h3>
+              <p class="uppercase text-xs text-on-surface-variant tracking-wider">Camarógrafo</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Carousel Dots -->
+        <div class="flex justify-center gap-2 mt-8 reveal" id="carousel-dots"></div>
+      </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos" class="py-16 md:py-32 bg-atmo-resena">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <span class="text-sm uppercase tracking-widest text-tertiary reveal">Nuestro Trabajo</span>
+          <h2 class="font-display text-3xl md:text-4xl text-white italic reveal">Proyectos</h2>
+        </div>
+
+        <!-- Proyecto: Renacer en Tacones -->
+        <div class="reveal-scale">
+          <div class="glass-panel rounded-3xl overflow-hidden card-glow">
+            <div class="grid md:grid-cols-2">
+              <!-- Image -->
+              <div class="relative aspect-[16/10] md:aspect-auto overflow-hidden group">
+                <img alt="Renacer en Tacones — Documental"
+                  class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                  src="./portada.png"
+                  loading="lazy" decoding="async">
+                <div class="absolute inset-0 bg-gradient-to-r from-transparent to-surface/60 hidden md:block"></div>
+                <div class="absolute top-4 left-4">
+                  <span class="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider animate-pulse" style="background: linear-gradient(135deg, #bd00ff, #ff4b89); color: #fff;">En Producción</span>
+                </div>
+              </div>
+
+              <!-- Content -->
+              <div class="p-8 md:p-12 flex flex-col justify-center">
+                <span class="text-xs uppercase tracking-widest text-tertiary mb-2 font-semibold">Proyecto Documental</span>
+                <h3 class="font-display text-3xl md:text-4xl text-primary italic mb-4">El Universo de Isabella Caoba</h3>
+                <p class="text-white/80 leading-relaxed mb-6 text-sm md:text-base">La historia sigue a Diego, un joven de Lima Norte profundamente ligado a la iglesia católica que, tras perder a su madre durante la pandemia, cae en una crisis espiritual absoluta. En su búsqueda por sanar, descubre el arte drag y da vida a Isabella Caoba: un personaje que transforma el escenario en su nuevo hogar y el maquillaje en una armadura de resiliencia. A través de este renacimiento, Diego transmuta su dolor en arte y encuentra en la comunidad drag a su familia elegida.</p>
+                
+                <div class="flex flex-wrap gap-2.5 mb-8">
+                  <span class="px-3 py-1 rounded-full text-xs border border-outline-variant/40 text-on-surface-variant font-sans">Cine Documental</span>
+                  <span class="px-3 py-1 rounded-full text-xs border border-outline-variant/40 text-on-surface-variant font-sans">Identidad & Arte Drag</span>
+                  <span class="px-3 py-1 rounded-full text-xs border border-outline-variant/40 text-on-surface-variant font-sans">Lima Norte</span>
+                  <span class="px-3 py-1 rounded-full text-xs border border-outline-variant/40 text-on-surface-variant font-sans">Resiliencia</span>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-6 items-start sm:items-center justify-between border-t border-outline-variant/20 pt-6">
+                  <div>
+                    <a href="#documental"
+                      class="flex items-center gap-2 px-6 py-3 rounded-full font-semibold magnetic-btn w-fit text-sm" style="background: linear-gradient(135deg, #bd00ff 0%, #ff4b89 100%); color: #ffffff"><span
+                        class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">play_arrow</span>Ver
+                      documental</a>
+                  </div>
+                  
+                  <!-- Social Links Row -->
+                  <div class="flex items-center gap-3">
+                    <span class="text-xs uppercase text-on-surface-variant tracking-wider font-semibold">Sigue:</span>
+                    <div class="flex gap-2">
+                      <!-- Spotify -->
+                      <a href="https://open.spotify.com/intl-es/artist/7mDUIRzBtKpgaQs4i6U940?si=cC-ZWggBTqe63rVAzc44vg&nd=1&dlsi=83bdb2407ae8418e" 
+                        target="_blank" rel="noopener noreferrer" title="Spotify"
+                        class="w-10 h-10 rounded-full glass-panel flex items-center justify-center text-primary hover:text-white hover:bg-[#1DB954] hover:border-transparent transition-all duration-300">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                          <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.49 17.31c-.22.36-.685.474-1.045.255-2.905-1.775-6.565-2.175-10.87-1.192-.41.094-.82-.164-.915-.575-.094-.41.164-.82.575-.915 4.71-1.077 8.745-.623 12.005 1.373.36.22.474.685.255 1.054zm1.465-3.26c-.276.45-.86.595-1.31.32-3.325-2.045-8.395-2.635-12.32-1.445-.505.15-1.035-.14-1.185-.645-.15-.505.14-1.035.645-1.185 4.5-.136 10.07.495 13.85 2.82.45.276.595.86.32 1.335zm.105-3.385c-3.99-2.37-10.57-2.59-14.37-1.435-.615.185-1.26-.17-1.445-.785-.185-.615.17-1.26.785-1.445 4.37-1.325 11.62-1.065 16.21 1.66.55.33.73 1.04.4 1.59-.33.55-1.04.73-1.59.4z"/>
+                        </svg>
+                      </a>
+                      <!-- Instagram -->
+                      <a href="https://www.instagram.com/renacerentacones?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+                        target="_blank" rel="noopener noreferrer" title="Instagram"
+                        class="w-10 h-10 rounded-full glass-panel flex items-center justify-center text-primary hover:text-white hover:bg-gradient-to-tr hover:from-[#f9ce34] hover:via-[#ee2a7b] hover:to-[#6228d7] hover:border-transparent transition-all duration-300">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                      </a>
+                      <!-- TikTok -->
+                      <a href="https://www.tiktok.com/@ruidovisual10?is_from_webapp=1&sender_device=pc" 
+                        target="_blank" rel="noopener noreferrer" title="TikTok"
+                        class="w-10 h-10 rounded-full glass-panel flex items-center justify-center text-primary hover:text-white hover:bg-[#000000] hover:border-transparent transition-all duration-300">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                          <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.06-2.89-.52-4.06-1.39-.77-.57-1.39-1.33-1.85-2.2v8.28c-.02 2.23-.74 4.51-2.42 6.01-1.89 1.8-4.72 2.23-7.05 1.58-2.61-.74-4.79-2.97-5.26-5.69-.64-3.51 1.34-7.25 4.84-8.08 1.05-.27 2.15-.27 3.22-.05v4.11c-.81-.24-1.7-.22-2.48.16-1.24.54-1.92 1.94-1.63 3.28.27 1.29 1.5 2.22 2.8 2.14 1.48-.02 2.6-1.28 2.6-2.77V0z"/>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Documental & Estreno (Countdown) -->
+    <section id="documental" class="py-16 md:py-32 bg-atmo-galeria overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <div class="max-w-3xl mx-auto mb-16">
+          <span class="text-sm text-secondary uppercase tracking-widest reveal">Estreno Exclusivo</span>
+          <h2 class="font-display text-4xl md:text-5xl text-white italic mt-2 reveal">Renacer en Tacones</h2>
+          <p class="text-white/70 mt-4 reveal">El viaje cinematográfico hacia el corazón de la transformación está a punto de comenzar. Sigue el cronómetro en tiempo real hacia el gran estreno de nuestro documental insignia.</p>
+        </div>
+
+        <!-- Countdown Card Container -->
+        <div class="reveal-scale max-w-4xl mx-auto">
+          <div class="glass-panel rounded-3xl p-8 md:p-12 border border-outline-variant/20 relative overflow-hidden">
+            <!-- Background glow -->
+            <div class="absolute -top-24 -left-24 w-48 h-48 rounded-full bg-primary/20 blur-3xl"></div>
+            <div class="absolute -bottom-24 -right-24 w-48 h-48 rounded-full bg-secondary/20 blur-3xl"></div>
+
+            <!-- Countdown Message Element (will receive active video player when finished) -->
+            <div id="countdown-message">
+              <h3 class="text-lg uppercase tracking-wider text-[#FFD700] mb-8 font-semibold">El estreno comienza en</h3>
+              
+              <!-- Grid values -->
+              <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto" id="countdown-grid">
+                <!-- Days -->
+                <div class="flex flex-col items-center p-4 bg-surface-container-lowest/60 rounded-2xl border border-outline-variant/10 shadow-lg">
+                  <span id="cd-days" class="font-display text-5xl md:text-6xl text-white font-bold tracking-tight">00</span>
+                  <span class="text-xs uppercase text-on-surface-variant tracking-wider mt-2 font-semibold font-sans">Días</span>
+                </div>
+                <!-- Hours -->
+                <div class="flex flex-col items-center p-4 bg-surface-container-lowest/60 rounded-2xl border border-outline-variant/10 shadow-lg">
+                  <span id="cd-hours" class="font-display text-5xl md:text-6xl text-primary font-bold tracking-tight">00</span>
+                  <span class="text-xs uppercase text-on-surface-variant tracking-wider mt-2 font-semibold font-sans">Horas</span>
+                </div>
+                <!-- Minutes -->
+                <div class="flex flex-col items-center p-4 bg-surface-container-lowest/60 rounded-2xl border border-outline-variant/10 shadow-lg">
+                  <span id="cd-minutes" class="font-display text-5xl md:text-6xl text-secondary font-bold tracking-tight">00</span>
+                  <span class="text-xs uppercase text-on-surface-variant tracking-wider mt-2 font-semibold font-sans">Minutos</span>
+                </div>
+                <!-- Seconds -->
+                <div class="flex flex-col items-center p-4 bg-surface-container-lowest/60 rounded-2xl border border-outline-variant/10 shadow-lg">
+                  <span id="cd-seconds" class="font-display text-5xl md:text-6xl text-[#e9c400] font-bold tracking-tight">00</span>
+                  <span class="text-xs uppercase text-on-surface-variant tracking-wider mt-2 font-semibold font-sans">Segundos</span>
+                </div>
+              </div>
+
+              <!-- Time Detail -->
+              <p class="text-xs text-on-surface-variant/80 mt-8">Estreno programado para el <span class="text-white font-semibold">Martes 30 de junio de 2026</span> a las <span class="text-white font-semibold">8:00 PM (Hora de Lima)</span>.</p>
+              
+              <!-- Subscribe Form -->
+              <div class="mt-8 max-w-md mx-auto">
+                <form onsubmit="event.preventDefault(); alert('¡Te has suscrito con éxito! Te enviaremos una notificación antes del estreno.'); this.reset();" class="flex gap-2 p-1.5 rounded-full bg-surface-container border border-outline-variant/30">
+                  <input type="email" placeholder="Tu correo electrónico" required class="flex-1 bg-transparent px-4 py-2 text-sm text-white focus:outline-none focus:ring-0 placeholder-on-surface-variant/50">
+                  <button type="submit" class="px-6 py-2 rounded-full font-semibold text-xs text-white hover:opacity-90 active:scale-95 transition-all cursor-pointer" style="background: linear-gradient(135deg, #bd00ff, #ff4b89)">Notificarme</button>
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recorrido de la Marcha -->
+    <section id="recorrido" class="py-16 md:py-32 bg-atmo-colaboradores overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+          <div>
+            <span class="text-sm text-secondary uppercase tracking-widest reveal">Contexto y Escenario</span>
+            <h2 class="text-3xl md:text-4xl text-white font-display italic reveal">El Recorrido del Orgullo 2026</h2>
+          </div>
+          <p class="max-w-md text-white/80 reveal">
+            El corazón de <span class="text-primary font-semibold">Renacer en Tacones</span> late en las calles de Lima. Capturamos la verdad de la marcha del orgullo LGBTI+ 2026, un recorrido histórico de resiliencia y visibilidad.
+          </p>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          <!-- Left Column: Organic Styled Map -->
+          <div class="lg:col-span-7 reveal-left">
+            <div class="organic-map-container aspect-[4/3] w-full group">
+              <img alt="Recorrido Marcha del Orgullo Lima 2026" 
+                class="organic-map" 
+                src="./img/mapa_recorrido.jpg" 
+                loading="lazy" decoding="async">
+              <!-- Inline Helper Hint -->
+              <div class="absolute bottom-4 left-4 right-4 bg-surface/80 backdrop-blur-md px-4 py-2 rounded-xl border border-outline-variant/30 text-center text-xs text-white/90 pointer-events-none transition-opacity duration-300 opacity-100 group-hover:opacity-0 flex items-center justify-center gap-2">
+                <span class="material-symbols-outlined text-sm text-primary">touch_app</span>
+                <span>Pasa el cursor por encima para ver el mapa en su color original</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Stepper/Info -->
+          <div class="lg:col-span-5 space-y-8 reveal-right">
+            <!-- Details Card -->
+            <div class="glass-panel rounded-2xl p-6 border border-outline-variant/20 space-y-4">
+              <div class="flex items-center gap-3 text-[#FFD700]">
+                <span class="material-symbols-outlined">calendar_today</span>
+                <span class="font-semibold">Sábado 27 de junio, 2026</span>
+              </div>
+              <div class="flex items-center gap-3 text-primary">
+                <span class="material-symbols-outlined">schedule</span>
+                <span class="font-semibold">3:00 p.m.</span>
+              </div>
+              <div class="flex items-center gap-3 text-secondary">
+                <span class="material-symbols-outlined">location_on</span>
+                <span class="font-semibold">Partida: Av. De La Peruanidad, Jesús María</span>
+              </div>
+            </div>
+
+            <!-- Route Timeline Stepper -->
+            <div class="relative pl-6 border-l border-outline-variant/40 space-y-6">
+              <!-- Step 1 -->
+              <div class="relative">
+                <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-secondary shadow-[0_0_10px_rgba(255,75,137,0.5)]"></div>
+                <h4 class="text-white font-semibold">1. Concentración y Salida</h4>
+                <p class="text-xs text-on-surface-variant">Av. De La Peruanidad (Jesús María) - Campo de Marte. Punto de partida oficial.</p>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="relative">
+                <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-primary shadow-[0_0_10px_rgba(189,0,255,0.5)]"></div>
+                <h4 class="text-white font-semibold">2. Eje Av. Guzmán Blanco</h4>
+                <p class="text-xs text-on-surface-variant">Hacia Plaza Bolognesi. El avance inicial tiñe de colores las avenidas.</p>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="relative">
+                <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-tertiary shadow-[0_0_10px_rgba(233,196,0,0.5)]"></div>
+                <h4 class="text-white font-semibold">3. Av. Alfonso Ugarte</h4>
+                <p class="text-xs text-on-surface-variant">Vía principal hacia la Plaza Dos de Mayo. Columnas de carros alegóricos y colectivos.</p>
+              </div>
+
+              <!-- Step 4 -->
+              <div class="relative">
+                <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-primary-container shadow-[0_0_10px_rgba(189,0,255,0.5)]"></div>
+                <h4 class="text-white font-semibold">4. Av. Nicolás de Piérola</h4>
+                <p class="text-xs text-on-surface-variant">Ingreso al centro histórico hacia Av. Garcilaso de la Vega.</p>
+              </div>
+            </div>
+            
+            <!-- Collaborative Badges -->
+            <div class="flex items-center gap-4 pt-4 border-t border-outline-variant/20">
+              <span class="text-xs text-on-surface-variant">Organizan:</span>
+              <span class="px-3 py-1 rounded-full text-[10px] font-bold tracking-wider bg-surface-container text-white border border-outline-variant/30">Colectivo Marcha del Orgullo</span>
+              <span class="px-3 py-1 rounded-full text-[10px] font-bold tracking-wider bg-surface-container text-[#FFD700] border border-outline-variant/30">InterPride</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galería -->
+    <section id="galeria" class="py-16 md:py-32 bg-atmo-galeria">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12">
+          <span class="text-sm uppercase tracking-widest text-primary reveal font-semibold">Mundo Visual</span>
+          <h2 class="text-3xl md:text-4xl text-white italic reveal mt-2">Una ventana al brillo</h2>
+          <p class="text-white/70 mt-4 max-w-2xl mx-auto reveal leading-relaxed">Una crónica visual que captura la estética, el misticismo y la magia técnica que dan forma a Renacer en Tacones en cada toma.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-[600px] md:h-[800px]">
+          <div class="md:col-span-2 md:row-span-2 overflow-hidden rounded-2xl relative group reveal-scale stagger-1 gallery-item">
+            <img alt="Escena amplia"
+              class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              src="./img/tomas/Copia de DSC00778.JPG"
+              loading="lazy" decoding="async">
+          </div>
+          <div class="md:col-span-2 overflow-hidden rounded-2xl relative group">
+            <img alt="Primer plano ojo"
+              class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              src="./img/tomas/Copia de DSC00783.JPG"
+              loading="lazy" decoding="async">
+          </div>
+          <div class="overflow-hidden rounded-2xl relative group">
+            <img alt="Tacones"
+              class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              src="./img/tomas/Copia de DSC00787.JPG"
+              loading="lazy" decoding="async">
+          </div>
+          <div class="overflow-hidden rounded-2xl relative group">
+            <img alt="Backstage"
+              class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+              src="./img/tomas/Copia de DSC00791.JPG"
+              loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Redes Sociales -->
+    <section class="py-12" style="background: linear-gradient(to bottom, #1d0c25, #18071f)">
+      <div class="max-w-7xl mx-auto px-6 text-center">
+        <h2 class="text-2xl text-primary mb-6">Sigue la transformación</h2>
+        <div class="flex justify-center gap-6">
+          <a class="w-12 h-12 rounded-full glass-panel flex items-center justify-center text-primary hover:text-white hover:bg-primary-container transition-all"
+            href="https://www.instagram.com/renacerentacones?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
+          </a>
+          <a class="w-12 h-12 rounded-full glass-panel flex items-center justify-center text-primary hover:text-white hover:bg-primary-container transition-all"
+            href="#" aria-label="YouTube">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.518 3.545 12 3.545 12 3.545s-7.518 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.87.508 9.388.508 9.388.508s7.518 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+            </svg>
+          </a>
+          <a class="w-12 h-12 rounded-full glass-panel flex items-center justify-center text-primary hover:text-white hover:bg-primary-container transition-all"
+            href="https://www.tiktok.com/@ruidovisual10?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+              <path
+                d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.06-2.89-.52-4.06-1.39-.77-.57-1.39-1.33-1.85-2.2v8.28c-.02 2.23-.74 4.51-2.42 6.01-1.89 1.8-4.72 2.23-7.05 1.58-2.61-.74-4.79-2.97-5.26-5.69-.64-3.51 1.34-7.25 4.84-8.08 1.05-.27 2.15-.27 3.22-.05v4.11c-.81-.24-1.7-.22-2.48.16-1.24.54-1.92 1.94-1.63 3.28.27 1.29 1.5 2.22 2.8 2.14 1.48-.02 2.6-1.28 2.6-2.77V0z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-outline-variant/20 py-12 bg-atmo-footer">
+      <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex flex-col items-center md:items-start gap-2">
+          <div class="italic text-primary font-display text-xl">Ruido Visual</div>
+          <p class="text-on-surface-variant">© 2025 Ruido Visual. Narrativas que transforman.</p>
+        </div>
+        <div class="flex gap-6">
+          <a href="https://www.instagram.com/renacerentacones?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer" class="text-on-surface-variant hover:text-secondary">Instagram</a>
+          <a class="text-on-surface-variant hover:text-secondary">YouTube</a>
+          <a href="https://www.tiktok.com/@ruidovisual10?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" class="text-on-surface-variant hover:text-secondary">TikTok</a>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Mobile floating action -->
+  <button
+    class="md:hidden fixed bottom-6 right-6 w-14 h-14 bg-primary-container text-white rounded-full flex items-center justify-center shadow-xl z-50">
+    <span class="material-symbols-outlined">menu</span>
+  </button>
+
+  <!-- Optimized JS: event delegation + rAF scroll handling + mobile menu toggle + Carousel -->
+  <script>
+    (function () {
+      // Smooth scroll via delegation
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest && e.target.closest('a[href^="#"]');
+        if (!a) return;
+        var href = a.getAttribute('href');
+        if (!href || href === '#') return;
+        var target = document.querySelector(href);
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+      });
+
+      // Sticky header with rAF for smoother updates
+      var header = document.querySelector('header');
+      var lastY = 0, ticking = false;
+      function onScroll() { lastY = window.scrollY; if (!ticking) { window.requestAnimationFrame(function () { if (lastY > 50) { header.classList.add('bg-surface/95'); header.classList.remove('bg-surface/80'); } else { header.classList.add('bg-surface/80'); header.classList.remove('bg-surface/95'); } ticking = false; }); ticking = true; } }
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      // Mobile menu simple toggle
+      var mobileBtn = document.getElementById('mobile-menu-btn');
+      if (mobileBtn) { mobileBtn.addEventListener('click', function () { document.body.classList.toggle('menu-open'); }); }
+    })();
+
+    // === SCROLL REVEAL with Intersection Observer ===
+    (function() {
+      var revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+      if (!('IntersectionObserver' in window)) {
+        revealEls.forEach(function(el) { el.classList.add('revealed'); });
+        return;
+      }
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+      revealEls.forEach(function(el) { observer.observe(el); });
+    })();
+
+    // === TEAM CAROUSEL ===
+    (function() {
+      const track = document.getElementById('carousel-track');
+      const prevBtn = document.getElementById('carousel-prev');
+      const nextBtn = document.getElementById('carousel-next');
+      const dotsContainer = document.getElementById('carousel-dots');
+      
+      if (!track || !prevBtn || !nextBtn || !dotsContainer) return;
+      
+      const cards = Array.from(track.children);
+      let cardWidth = cards[0].getBoundingClientRect().width;
+      let currentIndex = 0;
+      const gap = 24; // 24px gap between cards
+      
+      // Responsive visible cards count
+      const getVisibleCount = () => {
+        if (window.innerWidth >= 1024) return 3;
+        if (window.innerWidth >= 640) return 2;
+        return 1;
+      };
+
+      const getMaxIndex = () => cards.length - getVisibleCount();
+      
+      function updatePosition() {
+        // Clamp index
+        const maxIdx = getMaxIndex();
+        if (currentIndex > maxIdx) currentIndex = maxIdx;
+        if (currentIndex < 0) currentIndex = 0;
+        
+        track.style.transform = `translateX(-${currentIndex * (cardWidth + gap)}px)`;
+        updateDots();
+      }
+      
+      function createDots() {
+        dotsContainer.innerHTML = '';
+        const dotsNum = getMaxIndex() + 1;
+        if (dotsNum <= 1) return;
+        
+        for (let i = 0; i < dotsNum; i++) {
+          const dot = document.createElement('button');
+          dot.className = `w-2 h-2 rounded-full transition-all duration-300 ${i === currentIndex ? 'bg-primary w-6' : 'bg-outline-variant/40'}`;
+          dot.ariaLabel = `Ir al slide ${i + 1}`;
+          dot.addEventListener('click', () => {
+            currentIndex = i;
+            updatePosition();
+          });
+          dotsContainer.appendChild(dot);
+        }
+      }
+      
+      function updateDots() {
+        const dots = Array.from(dotsContainer.children);
+        dots.forEach((dot, idx) => {
+          if (idx === currentIndex) {
+            dot.className = 'w-6 h-2 rounded-full bg-primary transition-all duration-300';
+          } else {
+            dot.className = 'w-2 h-2 rounded-full bg-outline-variant/40 transition-all duration-300';
+          }
+        });
+      }
+      
+      // Resize Handler
+      let resizeTimeout;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+          cardWidth = cards[0].getBoundingClientRect().width;
+          createDots();
+          updatePosition();
+        }, 100);
+      });
+      
+      // Arrows Listeners
+      nextBtn.addEventListener('click', () => {
+        const maxIdx = getMaxIndex();
+        if (currentIndex < maxIdx) {
+          currentIndex++;
+        } else {
+          currentIndex = 0; // Loop back
+        }
+        updatePosition();
+      });
+      
+      prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+        } else {
+          currentIndex = getMaxIndex(); // Loop to end
+        }
+        updatePosition();
+      });
+      
+      // Touch / Drag to scroll support
+      let isDragging = false;
+      let startX = 0;
+      let currentTranslate = 0;
+      let prevTranslate = 0;
+      
+      track.addEventListener('mousedown', dragStart);
+      track.addEventListener('touchstart', dragStart, { passive: true });
+      
+      window.addEventListener('mousemove', dragMove);
+      window.addEventListener('touchmove', dragMove, { passive: true });
+      
+      window.addEventListener('mouseup', dragEnd);
+      window.addEventListener('touchend', dragEnd);
+      
+      function dragStart(e) {
+        isDragging = true;
+        startX = getPositionX(e);
+        track.style.transition = 'none';
+        track.style.cursor = 'grabbing';
+      }
+      
+      function dragMove(e) {
+        if (!isDragging) return;
+        const currentX = getPositionX(e);
+        const diff = currentX - startX;
+        const currentTranslate = -currentIndex * (cardWidth + gap) + diff;
+        track.style.transform = `translateX(${currentTranslate}px)`;
+      }
+      
+      function dragEnd(e) {
+        if (!isDragging) return;
+        isDragging = false;
+        track.style.transition = 'transform 0.5s ease-out';
+        track.style.cursor = 'grab';
+        
+        const endX = e.type.includes('touch') ? e.changedTouches[0].clientX : e.clientX;
+        const diff = endX - startX;
+        const threshold = 50;
+        
+        if (diff < -threshold && currentIndex < getMaxIndex()) {
+          currentIndex++;
+        } else if (diff > threshold && currentIndex > 0) {
+          currentIndex--;
+        }
+        
+        updatePosition();
+      }
+      
+      function getPositionX(e) {
+        return e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
+      }
+      
+      // Autoplay
+      let autoplayInterval;
+      
+      function startAutoplay() {
+        autoplayInterval = setInterval(() => {
+          const maxIdx = getMaxIndex();
+          if (currentIndex < maxIdx) {
+            currentIndex++;
+          } else {
+            currentIndex = 0; // Loop back
+          }
+          updatePosition();
+        }, 3000);
+      }
+      
+      function stopAutoplay() {
+        clearInterval(autoplayInterval);
+      }
+      
+      // Pause on hover
+      const carouselContainer = document.getElementById('team-carousel');
+      if (carouselContainer) {
+        carouselContainer.addEventListener('mouseenter', stopAutoplay);
+        carouselContainer.addEventListener('mouseleave', startAutoplay);
+      }
+      
+      // Initialize
+      createDots();
+      updatePosition();
+      startAutoplay();
+    })();
+
+    // === COUNTDOWN TIMER ===
+    (function() {
+      // Premiere: Tuesday, June 30, 2026 at 20:00:00 (GMT-5, Lima time)
+      const countdownDate = new Date("2026-06-30T20:00:00-05:00").getTime();
+      
+      const daysVal = document.getElementById('cd-days');
+      const hoursVal = document.getElementById('cd-hours');
+      const minutesVal = document.getElementById('cd-minutes');
+      const secondsVal = document.getElementById('cd-seconds');
+      const cdGrid = document.getElementById('countdown-grid');
+      const cdMessage = document.getElementById('countdown-message');
+      
+      if (!daysVal || !hoursVal || !minutesVal || !secondsVal) return;
+      
+      const timer = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = countdownDate - now;
+        
+        if (distance < 0) {
+          clearInterval(timer);
+          if (cdGrid) cdGrid.classList.add('hidden');
+          if (cdMessage) {
+            cdMessage.innerHTML = `
+              <div class="text-center py-6 animate-fade-in">
+                <span class="px-4 py-2 rounded-full text-xs font-bold bg-[#ecb2ff]/20 text-primary border border-primary/30">¡YA DISPONIBLE!</span>
+                <h3 class="font-display text-4xl text-white mt-4 italic">Mira el documental completo</h3>
+                <p class="text-on-surface-variant mt-2 max-w-md mx-auto">El viaje hacia la metamorfosis de Diego ya está disponible en exclusiva.</p>
+                <div class="mt-8 relative aspect-video max-w-2xl mx-auto rounded-2xl overflow-hidden glass-panel border border-outline-variant/30 group">
+                  <div class="absolute inset-0 bg-black/40 z-10 flex items-center justify-center">
+                    <button class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300 cursor-pointer">
+                      <span class="material-symbols-outlined text-3xl" style="font-variation-settings:'FILL' 1">play_arrow</span>
+                    </button>
+                  </div>
+                  <img src="./portada.png" class="w-full h-full object-cover">
+                </div>
+              </div>`;
+          }
+          return;
+        }
+        
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        daysVal.innerText = String(days).padStart(2, '0');
+        hoursVal.innerText = String(hours).padStart(2, '0');
+        minutesVal.innerText = String(minutes).padStart(2, '0');
+        secondsVal.innerText = String(seconds).padStart(2, '0');
+      }, 1000);
+    })();
+  </script>
+</body>
+
+</html>
